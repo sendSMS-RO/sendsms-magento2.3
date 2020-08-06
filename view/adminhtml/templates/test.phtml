@@ -1,0 +1,39 @@
+<form class="form" action="<?php echo $block->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]) ?>" method="post">
+    <input name="form_key" type="hidden" value="<?php echo \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Data\Form\FormKey')->getFormKey(); ?>" />
+    <div class="fieldset-wrapper">
+        <div class="admin__fieldset-wrapper-content">
+            <fieldset class="admin__fieldset">
+                <div class="admin__field">
+                    <label for="phone" class="admin__field-label">
+                        <span>Telefon</span>
+                    </label>
+
+                    <div class="admin__field-control">
+                        <input type="text" id="phone" name="phone" class="admin__control-text" required>
+                    </div>
+                </div>
+                <div class="admin__field">
+                    <label for="message" class="admin__field-label">
+                        <span>Mesaj</span>
+                    </label>
+
+                    <div class="admin__field-control">
+                        <textarea id="message" name="message" class="admin__control-textarea sendsms-char-count" required></textarea>
+                    </div>
+                </div>
+                <div class="admin__field">
+                    <label class="admin__field-label"></label>
+                    <div class="admin__field-control">
+                        <div class="actions-toolbar">
+                            <div class="primary">
+                                <button type="submit" class="action submit primary" title="Trimite mesajul">
+                                    <span>Trimite mesajul</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>

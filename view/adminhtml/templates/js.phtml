@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            $(function() {
+                $(document).on('keyup', 'div.sendsms-char-count-filtered textarea', function (event) {
+                    var text_remaining = 160 - $(this).val().length;
+                    $(this).attr('maxlength', 160);
+                    var notice = $(document).find('.admin__field-note span')[0];
+                    $(notice).html(text_remaining + ' caractere ramase');
+                });
+            });
+        });
+</script>
